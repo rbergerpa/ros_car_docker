@@ -1,9 +1,12 @@
 #!/bin/sh
 
 DIR=`dirname $0`
-DIR=`realpath $DIR`
+DIR=`(cd $DIR && pwd)`
 
+if [ -z $UID ] ; then
 UID=`id -u`
+fi
+
 GID=`id -g`
 
 XSOCK=/tmp/.X11-unix/X0
