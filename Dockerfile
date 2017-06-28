@@ -9,6 +9,7 @@ RUN echo "deb http://packages.osrfoundation.org/gazebo/ubuntu-stable `lsb_releas
 RUN wget http://packages.osrfoundation.org/gazebo.key -O - | sudo apt-key add - && apt-get update && apt-get install -y ros-indigo-gazebo7-ros-pkgs
 
 RUN apt-get install -y ros-indigo-rosbridge-server
+RUN apt-get install -y ros-indigo-rosserial-arduino
 
 RUN mkdir /.gazebo && chmod 1777 /.gazebo
 RUN mkdir /.sdformat && chmod 1777 /.sdformat
